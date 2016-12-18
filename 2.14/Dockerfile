@@ -9,6 +9,8 @@ RUN /build/scripts/getDeps.sh && \
     /build/scripts/getCode.sh && \
     /build/scripts/make.sh && \
     /build/scripts/clean.sh
+ADD start.sh /start.sh
+RUN chmod 0755 /start.sh
 
 # A few tunable variables for QGIS
 ENV QGIS_DEBUG 5
